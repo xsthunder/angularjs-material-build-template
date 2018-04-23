@@ -7,9 +7,9 @@ it has
 * basic router by ui-router
 * material design by material-angularjs
 * cookies by angular-cookies
-* web host by express on 8081
-* nested express support
 * ngAnimate
+* web host by express on 8080, available to change port by argument, e.g. `npm test 8082`
+* nested express support
 
 nested express app e.g
 ```javascript
@@ -28,7 +28,9 @@ console.log(`app listen in ${port}`);
 4. use soft link to node_modules to save space
 4. component based
 5. router based key-value storage stored in $stateParams
+
 e.g.
+
 ```
 // in ROUTER_CONSTANT
 {
@@ -75,8 +77,9 @@ others ( view doesn't need sidenav and toolbar )
     │   ├── service
     │   │   ├── ROUTER_CONSTANT.js //router configure
     │   │   ├── UrlConstant.js // http method configure
+    │   │   ├── MockHttp.js // MockHttp data
     │   │   ├── Util.js // utility
-    │   │   └── UserService.js //user infomation keeped by this factory or and wrap post/get work as top factory
+    │   │   └── UserService.js //user infomation keeped by this factory 
     │   ├── show //sidenav
     │   │    └── home
     │   │        ├── home.component.js
@@ -88,6 +91,7 @@ others ( view doesn't need sidenav and toolbar )
     │   └── toolbar 
     │       ├── toolbar.component.js
     │       └── toolbar.html
+    ├── style.css //overall css
     └── index.html
 ```
 

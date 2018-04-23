@@ -1,0 +1,9 @@
+p.distance{
+	text-align:right;
+}
+.hidey{
+	overflow-y: hidden!important;
+}
+.hidex{
+	overflow-x: hidden!important;
+}

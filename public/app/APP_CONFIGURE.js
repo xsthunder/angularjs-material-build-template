@@ -17,6 +17,7 @@
         server = 'localhost';
     }
     var tmp = {
+			  enableMockHttp:enableMockHttp
         serverOption:{
             enableHttps:enableHttps,
             server:server,

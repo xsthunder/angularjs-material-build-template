@@ -6,6 +6,7 @@
 (function () {
 
 		var enableMockHttp = true;
+	  var title = 'angular-material-build-template';
 
     var enableLocalServer = true;
     var enableHttps = false;
@@ -24,7 +25,7 @@
             serverPort:serverPort
         },
         base_url:("http" + (enableHttps?"s":"") +"://"+server + ':' + serverPort + '/' + serverBaseRoute + '/' ),
-        title:'angular-material-build-template'
+        title:title
     };
     angular.module('app')
         .constant('APP_CONFIGURE',tmp);

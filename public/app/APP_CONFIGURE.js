@@ -14,9 +14,12 @@
     var serverPort = 8080;
     var server='';
 		var serverBaseRoute = '';
-    if(enableLocalServer || !server){
+    if(enableLocalServer){
         server = 'localhost';
     }
+		else {
+				server = server||location.host;
+		}
     var tmp = {
 			  enableMockHttp:enableMockHttp,
         serverOption:{

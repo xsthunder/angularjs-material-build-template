@@ -8,10 +8,10 @@ it has
 * material design by material-angularjs
 * cookies by angular-cookies
 * ngAnimate
-* web host by express on 8080, available to change port by argument, e.g. `npm test 8082`
+* web host by koa-static on 8080, available to change port by argument, e.g. `npm test 8082`
 * nested express support
 
-nested express app e.g
+nested koa2 app e.g
 ```javascript
 const app = require('express')();
 app.use('/yourpath', require('./angularjs-material-build-template'));

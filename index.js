@@ -1,8 +1,13 @@
-const express = require( 'express' );
-const app = express();
-app.use( express.static(`${__dirname}/public/app`) );
-app.use( express.static(`${__dirname}/node_modules`) );
-app.use( express.static(`${__dirname}/public`) );
+const serve = require('koa-static');
+const Koa = require('koa');
+const app = new Koa();
+
+app.use( serve(`${__dirname}/public/app`) );
+app.use( serve(`${__dirname}/node_modules`) );
+app.use( serve(`${__dirname}/public`) );
+
+let {name,version} = require('./package.json');
+//console.log(__dirname);
 
 if(!module.parent){
 	let port = 8080;
@@ -14,9 +19,13 @@ if(!module.parent){
 			process.exit(1);
 		}
 	}
-	console.log(`app listening on ${port}`);
+	console.log(`${name} ${version} listening on ${port}`);
 	app.listen(port);
 }
 else{
-    module.exports = app;
+  module.exports = {
+		name:name,
+		version:version,
+		app:app
+	}
 }

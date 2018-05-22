@@ -1,5 +1,5 @@
 {
-  "name": "angularjs",
+  "name": "angularjs-material-build-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,6 +16,7 @@
     "angular-cookies": "^1.6.9",
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.7",
-    "express": "^4.16.2"
+    "koa": "^2.4.1",
+    "koa-static": "^4.0.3"
   }
 }
